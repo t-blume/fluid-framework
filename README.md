@@ -5,21 +5,27 @@
 The Formal schema-Level Index model for the web of Data (FLuID) is a mathematical model based on equivalence relations to formulate schema-level indices [1]. In this project, we implemented the basic building blocks, i.e., the Schema Elements along with their parameterizations in a generic, modular processing pipeline. This enables users to easily configure and compute any schema-level index. 
 Furthermore, the framework comes with a generic FLuID query engine that is able to perform structural queries on any index modeled with FLuID.
 
-We implemented the schema computation in a pipeline architecture following the basic principles of the SchemEX approach [2]. However, we redesigned the approach in a way that allows to abstract from the stream-based computation approach. 
+### We implemented the schema computation in a pipeline architecture following the basic principles of the SchemEX approach [2]. However, we redesigned the approach in a way that allows to abstract from the stream-based computation approach. 
+
 The figure below outlines the basic concept of the FLuID approach. All modules, e.g., the schema computation, can be changed and implemented differently. 
 
 ![framework-architecture](documents/images/fluid-framework-concept.png)
 
-
 ### Set up
 
-This git host the Intellij idea (https://www.jetbrains.com/idea/) maven project. It is recommend, to import it as such. We rely on the Rdf4J triple stores interface since we reuse the RDF beans framework (https://github.com/cyberborean/rdfbeans). Java version 8 or higher required. 
+The computation pipeline and the query engine are developed as Java 8 Maven projects. We rely on the Rdf4J triple stores interface since we reuse the RDF beans framework (https://github.com/cyberborean/rdfbeans). 
 
-1. Setup a Tomcat with rdf4 running
+#### Computation Pipeline
+
+1. Setup a Tomcat with Rdf4J running
 2. Create a repository
 3. Run the FLuID framework with host and repository parameters
-4. Enjoy!
+4. Profit!
 
+
+#### Query Engine
+
+This component can translate structural queries to the FLuID model.
 
 ### Development
 
