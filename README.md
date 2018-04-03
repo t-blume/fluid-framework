@@ -5,7 +5,7 @@
 The Formal schema-Level Index model for the web of Data (FLuID) is a mathematical model based on equivalence relations to formulate schema-level indices [1]. In this project, we implemented the basic building blocks, i.e., the Schema Elements along with their parameterizations in a generic, modular processing pipeline. This enables users to easily configure and compute any schema-level index. 
 Furthermore, the framework comes with a generic FLuID query engine that is able to perform structural queries on any index modeled with FLuID.
 
-### We implemented the schema computation in a pipeline architecture following the basic principles of the SchemEX approach [2]. However, we redesigned the approach in a way that allows to abstract from the stream-based computation approach. 
+We implemented the schema computation in a pipeline architecture following the basic principles of the SchemEX approach [2]. However, we redesigned the approach in a way that allows to abstract from the stream-based computation approach. 
 
 The figure below outlines the basic concept of the FLuID approach. All modules, e.g., the schema computation, can be changed and implemented differently. 
 
