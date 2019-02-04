@@ -39,5 +39,5 @@ Simplified component diagram:
 
 ### References
 
-1. Blume, T., Scherp, A.: Towards flexible indices for distributed graph data: The formal schema-level index model FLuID. In: To appear in: 30th GI-Workshop Grundlagen von Datenbanken. CEUR Workshop Proceedings (2018), preprint: https://www.dropbox.com/s/n9iuz3j6m90cb2b/towards-flexible-SLIs.pdf
+1. Blume, T., Scherp, A.: Towards flexible indices for distributed graph data: The formal schema-level index model FLuID. In: 30th GI-Workshop on Foundations of Databases (Grundlagen von Datenbanken). CEUR Workshop Proceedings (2018), http://ceur-ws.org/Vol-2126/paper3.pdf.
 2. Konrath, M., Gottron, T., Staab, S., Scherp, A.: SchemEX - efficient construction of a data catalogue by stream-based indexing of Linked Data. J. Web Sem. 16, 52–58 (2012)
