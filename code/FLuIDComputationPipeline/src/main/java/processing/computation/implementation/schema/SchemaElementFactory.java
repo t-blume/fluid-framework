@@ -5,10 +5,8 @@ import common.IQuint;
 import common.IResource;
 import common.interfaces.ISchemaElement;
 import output.interfaces.IElementStore;
-import output.interfaces.IUpdateCoordinator;
 import utils.interfaces.IElementCache;
 import utils.interfaces.IElementCacheListener;
-import zbw.cau.gotham.schema.ISchemaGraph;
 import zbw.cau.gotham.schema.SchemaGraphInferencing;
 
 import java.util.Collection;
@@ -57,17 +55,6 @@ public abstract class SchemaElementFactory implements IElementCacheListener<IIns
     protected SchemaGraphInferencing schemaGraph;     //ADD-INFO
 
 
-    public IUpdateCoordinator getUpdateCoordinator() {
-        return updateCoordinator;
-    }
-
-    public void setUpdateCoordinator(IUpdateCoordinator updateCoordinator) {
-        this.updateCoordinator = updateCoordinator;
-    }
-
-    //update coordinator
-    protected IUpdateCoordinator updateCoordinator;
-
     public SchemaElementFactory(IElementCache<IInstanceElement> window, IElementStore schemaElementsStore,
                                 SchemaGraphInferencing schemaGraph, boolean useIncomingProperties,
                                 Collection<String> disallowedLabels, boolean useSameAsInstances,
@@ -94,19 +81,7 @@ public abstract class SchemaElementFactory implements IElementCacheListener<IIns
      */
     public void updateSchemaElement(IInstanceElement instanceElement, ISchemaElement schemaElement, IResource parentInstanceLocator) {
         schemaElementsStore.add(schemaElement);
-        if (updateCoordinator != null) {
-            Set<IResource> contexts = new HashSet<>();
-            for (IQuint q : instanceElement.getOutgoingQuints())
-                contexts.add(q.getContext());
 
-            if (parentInstanceLocator != null) {
-                HashSet<IResource> parentInstances = new HashSet<>();
-                parentInstances.add(parentInstanceLocator);
-                updateCoordinator.addSchemaElement(hashCode(), instanceElement.getLocator(), schemaElement.getLocator(),contexts, parentInstances);
-            } else
-                updateCoordinator.addSchemaElement(hashCode(), instanceElement.getLocator(), schemaElement.getLocator(), contexts);
-
-        }
     }
 
     @Override
@@ -117,7 +92,5 @@ public abstract class SchemaElementFactory implements IElementCacheListener<IIns
     @Override
     public void finished() {
         schemaElementsStore.close();
-        if (updateCoordinator != null)
-            updateCoordinator.printInfo();
     }
 }

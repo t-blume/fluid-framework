@@ -12,6 +12,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="grammatica-1.6" level="project" />
+    <orderEntry type="library" name="Maven: percederberg.net:grammatica:1.6" level="project" />
+    <orderEntry type="library" name="Maven: kd.informatik:schema-graph:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.semanticweb.yars:nxparser-parsers:2.3.3" level="project" />
     <orderEntry type="library" name="Maven: org.semanticweb.yars:nxparser-api:2.3.3" level="project" />
     <orderEntry type="library" name="Maven: org.semanticweb.yars:nxparser-model:2.3.3" level="project" />
