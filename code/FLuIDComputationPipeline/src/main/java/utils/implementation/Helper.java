@@ -1,6 +1,6 @@
 package utils.implementation;
 
-import common.interfaces.IResource;
+import common.IResource;
 
 import java.io.File;
 

@@ -1,10 +1,10 @@
 package processing.preprocessing.implementation;
 
-import common.interfaces.IQuint;
+import common.IQuint;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import processing.computation.implementation.schema.schema_graph.RDFSSchemaGraph;
 import processing.preprocessing.interfaces.IQuintProcessor;
+import zbw.cau.gotham.schema.SchemaGraphInferencing;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,18 +16,19 @@ import java.util.Set;
 public class RDFSGraphFilter implements IQuintProcessor {
     private static final Logger logger = LogManager.getLogger(RDFSGraphFilter.class.getSimpleName());
 
-    private RDFSSchemaGraph schemaGraph;
+    private SchemaGraphInferencing schemaGraph;
     private Set<String> filterProperties;
 
     private int count = 0;
 
 
-    public RDFSSchemaGraph getSchemaGraph() {
+    public SchemaGraphInferencing getSchemaGraph() {
         return schemaGraph;
     }
 
     public RDFSGraphFilter(Set<String> filterProperties) {
-        this.schemaGraph = new RDFSSchemaGraph();
+        //TODO: add Parameter for file/memory
+        this.schemaGraph = new SchemaGraphInferencing();
         this.filterProperties = filterProperties;
     }
 

@@ -1,12 +1,12 @@
 package processing.computation.implementation.schema;
 
 
+import common.IInstanceElement;
+import common.IResource;
 import common.implemenation.RDFInstance;
-import common.interfaces.IInstanceElement;
-import common.interfaces.IResource;
-import common.interfaces.ISchemaGraph;
 import output.interfaces.IElementStore;
 import utils.interfaces.IElementCache;
+import zbw.cau.gotham.schema.SchemaGraphInferencing;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -29,7 +29,7 @@ public class PropertyObjectClusterFactory extends SimpleSchemaElementFactory {
      * @param useOutgoingProperties
      * @param objectEquivalence
      */
-    public PropertyObjectClusterFactory(IElementCache<IInstanceElement> window, IElementStore schemaElementsStore, ISchemaGraph schemaGraph,
+    public PropertyObjectClusterFactory(IElementCache<IInstanceElement> window, IElementStore schemaElementsStore, SchemaGraphInferencing schemaGraph,
                                         Collection<String> allowedLabels, Collection<String> disallowedLabels, boolean useSameAsInstances,
                                         boolean useIncomingProperties, boolean useOutgoingProperties, SchemaElementFactory objectEquivalence) {
         super(window, schemaElementsStore, schemaGraph, allowedLabels, disallowedLabels, useSameAsInstances, useIncomingProperties,

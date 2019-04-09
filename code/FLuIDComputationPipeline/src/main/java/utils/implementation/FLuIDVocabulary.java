@@ -1,8 +1,8 @@
 package utils.implementation;
 
 
-import common.implemenation.NodeResource;
-import common.interfaces.IResource;
+import common.IResource;
+import common.implementation.NodeResource;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.semanticweb.yars.nx.Resource;

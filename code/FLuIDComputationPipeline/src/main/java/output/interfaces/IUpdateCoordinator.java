@@ -1,6 +1,6 @@
 package output.interfaces;
 
-import common.interfaces.IResource;
+import common.IResource;
 import common.interfaces.ISchemaElement;
 
 import java.util.Set;

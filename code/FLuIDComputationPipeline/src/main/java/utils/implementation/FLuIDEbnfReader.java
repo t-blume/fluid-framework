@@ -1,8 +1,7 @@
 package utils.implementation;
 
-import common.interfaces.IInstanceElement;
+import common.IInstanceElement;
 import common.interfaces.ISchemaElement;
-import common.interfaces.ISchemaGraph;
 import net.percederberg.grammatica.parser.Node;
 import net.percederberg.grammatica.parser.ParserCreationException;
 import net.percederberg.grammatica.parser.ParserLogException;
@@ -16,6 +15,7 @@ import processing.computation.implementation.schema.*;
 import utils.implementation.EBNFParser.FluidConstants;
 import utils.implementation.EBNFParser.FluidParser;
 import utils.interfaces.IElementCache;
+import zbw.cau.gotham.schema.SchemaGraphInferencing;
 
 import java.io.StringReader;
 import java.util.Collection;
@@ -29,7 +29,7 @@ public class FLuIDEbnfReader {
     private static final Logger logger = LogManager.getLogger(FLuIDEbnfReader.class.getName());
 
     public static SchemaComputation parseConfig(String configString, IElementCache<IInstanceElement> window,
-                                                IElementStore<ISchemaElement> schemaCache, ISchemaGraph schemaGraph) {
+                                                IElementStore<ISchemaElement> schemaCache, SchemaGraphInferencing schemaGraph) {
         try {
             logger.debug(configString);
             FluidParser fluidParser = new FluidParser(new StringReader(configString));
@@ -133,7 +133,7 @@ public class FLuIDEbnfReader {
     private static ComplexSchemaElementFactory parseComplexSchemaElement(Node cse,
                                                                          IElementCache<IInstanceElement> window,
                                                                          IElementStore<ISchemaElement> schemaCache,
-                                                                         ISchemaGraph schemaGraph,
+                                                                         SchemaGraphInferencing schemaGraph,
                                                                          Config config) {
 
         config = parseParamterizations(cse, config);
@@ -206,7 +206,7 @@ public class FLuIDEbnfReader {
     private static SimpleSchemaElementFactory parseSimpleSchemaElement(Node sse,
                                                                        IElementCache<IInstanceElement> window,
                                                                        IElementStore<ISchemaElement> schemaCache,
-                                                                       ISchemaGraph schemaGraph,
+                                                                       SchemaGraphInferencing schemaGraph,
                                                                        Config config) {
 
         config = parseParamterizations(sse, config);

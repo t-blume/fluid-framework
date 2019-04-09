@@ -1,8 +1,7 @@
 package processing.preprocessing.interfaces;
 
 
-
-import common.interfaces.IQuint;
+import common.IQuint;
 
 import java.util.List;
 

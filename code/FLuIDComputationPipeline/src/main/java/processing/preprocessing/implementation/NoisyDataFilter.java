@@ -1,10 +1,10 @@
 package processing.preprocessing.implementation;
 
 
-import common.implemenation.NodeResource;
-import common.implemenation.Quad;
-import common.interfaces.IQuint;
-import common.interfaces.IResource;
+import common.IQuint;
+import common.IResource;
+import common.implementation.NodeResource;
+import common.implementation.Quad;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.iri.IRIFactory;
 import org.apache.jena.iri.Violation;

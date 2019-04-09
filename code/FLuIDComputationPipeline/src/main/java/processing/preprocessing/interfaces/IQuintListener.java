@@ -1,7 +1,7 @@
 package processing.preprocessing.interfaces;
 
 
-import common.interfaces.IQuint;
+import common.IQuint;
 
 /**
  * Listener used for handling processed {@link IQuint}s. The

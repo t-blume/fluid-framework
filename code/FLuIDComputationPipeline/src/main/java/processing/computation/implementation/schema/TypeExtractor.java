@@ -1,7 +1,7 @@
 package processing.computation.implementation.schema;
 
-import common.implemenation.NodeResource;
-import common.interfaces.IQuint;
+import common.IQuint;
+import common.implementation.NodeResource;
 import org.semanticweb.yars.nx.Literal;
 import org.semanticweb.yars.nx.Node;
 import org.semanticweb.yars.nx.Resource;

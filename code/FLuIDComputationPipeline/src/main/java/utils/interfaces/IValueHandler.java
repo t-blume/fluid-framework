@@ -1,11 +1,11 @@
 package utils.interfaces;
 
 
-import common.interfaces.IQuint;
+import common.IQuint;
 import processing.computation.implementation.schema.Link;
 
 public interface IValueHandler {
 
-        Link extract(IQuint quint);
+    Link extract(IQuint quint);
 
 }

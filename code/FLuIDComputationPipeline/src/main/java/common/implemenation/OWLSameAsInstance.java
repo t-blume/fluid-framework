@@ -1,9 +1,9 @@
 package common.implemenation;
 
 
-import common.interfaces.IInstanceElement;
-import common.interfaces.IQuint;
-import common.interfaces.IResource;
+import common.IInstanceElement;
+import common.IQuint;
+import common.IResource;
 
 import java.util.HashSet;
 import java.util.Set;

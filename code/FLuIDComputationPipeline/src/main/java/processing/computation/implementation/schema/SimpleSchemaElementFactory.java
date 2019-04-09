@@ -1,18 +1,19 @@
 package processing.computation.implementation.schema;
 
-import common.implemenation.NodeResource;
+import common.IInstanceElement;
+import common.IQuint;
+import common.IResource;
 import common.implemenation.OWLSameAsInstance;
-import common.implemenation.Quad;
-import common.interfaces.IInstanceElement;
-import common.interfaces.IQuint;
-import common.interfaces.IResource;
-import common.interfaces.ISchemaGraph;
+import common.implementation.NodeResource;
+import common.implementation.Quad;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.semanticweb.yars.nx.Resource;
 import output.interfaces.IElementStore;
 import utils.interfaces.IElementCache;
 import utils.interfaces.IValueHandler;
+import zbw.cau.gotham.schema.ISchemaGraph;
+import zbw.cau.gotham.schema.SchemaGraphInferencing;
 
 import java.util.*;
 
@@ -54,7 +55,7 @@ public abstract class SimpleSchemaElementFactory extends SchemaElementFactory {
      * @param useOutgoingProperties
      * @param valueHandler
      */
-    public SimpleSchemaElementFactory(IElementCache<IInstanceElement> window, IElementStore schemaElementsStore, ISchemaGraph schemaGraph,
+    public SimpleSchemaElementFactory(IElementCache<IInstanceElement> window, IElementStore schemaElementsStore, SchemaGraphInferencing schemaGraph,
                                       Collection<String> allowedLabels, Collection<String> disallowedLabels, boolean useSameAsInstances,
                                       boolean useIncomingProperties, boolean useOutgoingProperties, IValueHandler valueHandler) {
         super(window, schemaElementsStore, schemaGraph, useIncomingProperties, disallowedLabels, useSameAsInstances, allowedLabels, useOutgoingProperties);
@@ -140,7 +141,7 @@ public abstract class SimpleSchemaElementFactory extends SchemaElementFactory {
      * @param instance
      * @return
      */
-    private void inferProperties(IInstanceElement instance, ISchemaGraph schemaGraph) {
+    private void inferProperties(IInstanceElement instance, SchemaGraphInferencing schemaGraph) {
         IInstanceElement newInstance = instance.clone();
         if (schemaGraph != null) {
             HashMap<String, Set<String>> inferredProperties = schemaGraph.inferProperties(newInstance);
@@ -167,7 +168,7 @@ public abstract class SimpleSchemaElementFactory extends SchemaElementFactory {
     }
 
 
-    private void inferTypes(IInstanceElement instance, ISchemaGraph schemaGraph) {
+    private void inferTypes(IInstanceElement instance, SchemaGraphInferencing schemaGraph) {
         if (schemaGraph != null) {
             Set<String> types = schemaGraph.inferSubjectTypes(instance);
             if (types != null) {

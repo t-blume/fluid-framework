@@ -1,12 +1,12 @@
 package output.implementation;
 
-import common.interfaces.IResource;
+import common.IResource;
 import common.interfaces.ISchemaElement;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import output.interfaces.IElementListener;
 import output.interfaces.IElementStore;
-import utils.implementation.LRUCache;
+import utils.LRUCache;
 
 import java.util.*;
 import java.util.stream.Collectors;

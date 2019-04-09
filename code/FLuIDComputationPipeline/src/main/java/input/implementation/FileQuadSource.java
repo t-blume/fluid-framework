@@ -1,9 +1,9 @@
 package input.implementation;
 
 
-import common.implemenation.NodeResource;
-import common.implemenation.Quad;
-import common.interfaces.IQuint;
+import common.IQuint;
+import common.implementation.NodeResource;
+import common.implementation.Quad;
 import input.interfaces.IQuintSource;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

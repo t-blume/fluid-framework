@@ -1,7 +1,7 @@
 package output.implementation;
 
-import common.implemenation.NodeResource;
-import common.interfaces.IResource;
+import common.IResource;
+import common.implementation.NodeResource;
 import org.semanticweb.yars.nx.Node;
 import processing.computation.implementation.payload.DatasourceElement;
 import processing.computation.implementation.schema.ComplexSchemaElement;

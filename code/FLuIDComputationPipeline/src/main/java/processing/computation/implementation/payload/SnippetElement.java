@@ -1,7 +1,7 @@
 package processing.computation.implementation.payload;
 
+import common.IResource;
 import common.interfaces.IPayloadElement;
-import common.interfaces.IResource;
 import org.cyberborean.rdfbeans.annotations.RDFBean;
 import utils.implementation.FLuIDVocabulary;
 

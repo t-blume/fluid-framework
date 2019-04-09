@@ -1,12 +1,13 @@
 package common.implemenation;
 
-import common.interfaces.IResource;
+import common.IResource;
+import common.ITimestamp;
+import common.implementation.Quad;
 
-import java.sql.Timestamp;
 
 public class Quint extends Quad {
 
-    private Timestamp timestamp;
+    private ITimestamp timestamp;
 
     public Quint(IResource subject, IResource predicate, IResource object) {
         this(subject, predicate, object, null);
@@ -14,16 +15,16 @@ public class Quint extends Quad {
 
     public Quint(IResource subject, IResource predicate, IResource object, IResource context) {
         super(subject, predicate, object, context);
-        this.timestamp = new Timestamp(System.currentTimeMillis());
+        this.timestamp = new DateTimestamp(System.currentTimeMillis());
     }
 
-    public Quint(IResource subject, IResource predicate, IResource object, IResource context, Timestamp timestamp) {
+    public Quint(IResource subject, IResource predicate, IResource object, IResource context, ITimestamp timestamp) {
         super(subject, predicate, object, context);
         this.timestamp = timestamp;
     }
 
     @Override
-    public Timestamp getTimestamp() {
+    public ITimestamp getTimestamp() {
         return timestamp;
     }
 }

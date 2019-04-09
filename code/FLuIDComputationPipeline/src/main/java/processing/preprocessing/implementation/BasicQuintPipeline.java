@@ -1,6 +1,6 @@
 package processing.preprocessing.implementation;
 
-import common.interfaces.IQuint;
+import common.IQuint;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import processing.preprocessing.interfaces.IQuintListener;

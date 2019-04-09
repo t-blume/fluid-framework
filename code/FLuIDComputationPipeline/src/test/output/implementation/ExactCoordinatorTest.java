@@ -1,6 +1,6 @@
 package output.implementation;
 
-import common.interfaces.IResource;
+import common.IResource;
 import main.Main;
 import org.junit.After;
 import org.junit.Before;

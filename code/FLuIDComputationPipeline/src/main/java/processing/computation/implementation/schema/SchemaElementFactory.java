@@ -1,10 +1,15 @@
 package processing.computation.implementation.schema;
 
-import common.interfaces.*;
+import common.IInstanceElement;
+import common.IQuint;
+import common.IResource;
+import common.interfaces.ISchemaElement;
 import output.interfaces.IElementStore;
 import output.interfaces.IUpdateCoordinator;
 import utils.interfaces.IElementCache;
 import utils.interfaces.IElementCacheListener;
+import zbw.cau.gotham.schema.ISchemaGraph;
+import zbw.cau.gotham.schema.SchemaGraphInferencing;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -49,7 +54,7 @@ public abstract class SchemaElementFactory implements IElementCacheListener<IIns
     protected IElementStore<ISchemaElement> schemaElementsStore;   //OUT
 
     //where to store/lookup the ontology-level statements for inference
-    protected ISchemaGraph schemaGraph;     //ADD-INFO
+    protected SchemaGraphInferencing schemaGraph;     //ADD-INFO
 
 
     public IUpdateCoordinator getUpdateCoordinator() {
@@ -64,7 +69,7 @@ public abstract class SchemaElementFactory implements IElementCacheListener<IIns
     protected IUpdateCoordinator updateCoordinator;
 
     public SchemaElementFactory(IElementCache<IInstanceElement> window, IElementStore schemaElementsStore,
-                                ISchemaGraph schemaGraph, boolean useIncomingProperties,
+                                SchemaGraphInferencing schemaGraph, boolean useIncomingProperties,
                                 Collection<String> disallowedLabels, boolean useSameAsInstances,
                                 Collection<String> allowedLabels, boolean useOutgoingProperties) {
         this.window = window;

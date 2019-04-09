@@ -1,11 +1,11 @@
 package processing.computation.implementation.schema;
 
 
-import common.interfaces.IInstanceElement;
-import common.interfaces.IResource;
-import common.interfaces.ISchemaGraph;
+import common.IInstanceElement;
+import common.IResource;
 import output.interfaces.IElementStore;
 import utils.interfaces.IElementCache;
+import zbw.cau.gotham.schema.SchemaGraphInferencing;
 
 import java.util.Collection;
 import java.util.List;
@@ -19,7 +19,7 @@ public class ComplexSchemaElementFactory extends SchemaElementFactory {
     private SchemaElementFactory objectEquivalenceFactory = null;
 
 
-    public ComplexSchemaElementFactory(IElementCache<IInstanceElement> window, IElementStore schemaElementsStore, ISchemaGraph schemaGraph,
+    public ComplexSchemaElementFactory(IElementCache<IInstanceElement> window, IElementStore schemaElementsStore, SchemaGraphInferencing schemaGraph,
                                        List<SchemaElementFactory> subjectEquivalenceFactories,
                                        boolean predicateIdentityEquivalence,
                                        List<SchemaElementFactory> objectEquivalenceFactories,

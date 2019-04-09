@@ -1,10 +1,10 @@
 package processing.preprocessing.implementation;
 
 
+import common.IInstanceElement;
+import common.IQuint;
 import common.implemenation.OWLSameAsInstance;
-import common.implemenation.Quad;
-import common.interfaces.IInstanceElement;
-import common.interfaces.IQuint;
+import common.implementation.Quad;
 
 import static utils.implementation.Constants.OWL_SameAs;
 

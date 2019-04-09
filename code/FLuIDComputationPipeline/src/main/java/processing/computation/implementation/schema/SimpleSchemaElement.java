@@ -1,7 +1,7 @@
 package processing.computation.implementation.schema;
 
 
-import common.interfaces.IResource;
+import common.IResource;
 import common.interfaces.ISchemaElement;
 import org.cyberborean.rdfbeans.annotations.RDF;
 import org.semanticweb.yars.nx.BNode;

@@ -1,6 +1,6 @@
 package utils.implementation;
 
-import common.interfaces.IInstanceElement;
+import common.IInstanceElement;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import utils.interfaces.IElementCacheListener;

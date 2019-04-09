@@ -1,10 +1,9 @@
 package output.interfaces;
 
-import common.interfaces.ILocatable;
-import common.interfaces.IResource;
+import common.ILocatable;
+import common.IResource;
 
 import java.util.Collection;
-import java.util.List;
 
 public interface IElementStore<T extends ILocatable> extends IElementListener<T>{
     /**

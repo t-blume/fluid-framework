@@ -1,0 +1,3 @@
+[submodule "code/fluid-schema-graph"]
+	path = code/fluid-schema-graph
+	url = git@github.com:t-blume/fluid-schema-graph.git

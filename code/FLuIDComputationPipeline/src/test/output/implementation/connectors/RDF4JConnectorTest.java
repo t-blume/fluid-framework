@@ -1,7 +1,7 @@
 package output.implementation.connectors;
 
-import common.implemenation.NodeResource;
-import common.interfaces.IResource;
+import common.IResource;
+import common.implementation.NodeResource;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

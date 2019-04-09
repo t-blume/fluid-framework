@@ -1,7 +1,7 @@
 package output.implementation;
 
-import common.interfaces.IQuint;
-import common.interfaces.IResource;
+import common.IQuint;
+import common.IResource;
 import common.interfaces.ISchemaElement;
 import main.Main;
 import org.apache.logging.log4j.LogManager;

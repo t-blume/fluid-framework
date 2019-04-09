@@ -1,6 +1,10 @@
 package processing.computation.implementation.payload;
 
-import common.interfaces.*;
+import common.IInstanceElement;
+import common.IQuint;
+import common.IResource;
+import common.interfaces.IPayloadElement;
+import common.interfaces.ISchemaElement;
 
 import java.util.HashSet;
 import java.util.Set;

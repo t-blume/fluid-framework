@@ -1,7 +1,7 @@
 package processing.preprocessing.interfaces;
 
 
-import common.interfaces.IQuint;
+import common.IQuint;
 import input.interfaces.IQuintSource;
 
 /**

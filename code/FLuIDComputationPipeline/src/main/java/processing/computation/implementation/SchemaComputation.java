@@ -1,6 +1,6 @@
 package processing.computation.implementation;
 
-import common.interfaces.IInstanceElement;
+import common.IInstanceElement;
 import common.interfaces.ISchemaElement;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -31,7 +31,7 @@ public class SchemaComputation implements IElementCacheListener<IInstanceElement
             return;
 
 
-        //TODO: be careful here, direct connection to the triple store means element is gone and PAYLOAD is not written!
+        //be careful here, direct connection to the triple store means element is gone and PAYLOAD is not written!
         ISchemaElement schemaElementPrime = schemaElementFactory.createSchemaElement(instance);
         payloadElementFactory.createPayloadElements(instance, schemaElementPrime);
     }

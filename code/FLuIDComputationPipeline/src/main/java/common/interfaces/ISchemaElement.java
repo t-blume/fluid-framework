@@ -1,5 +1,7 @@
 package common.interfaces;
 
+import common.ILocatable;
+
 import java.util.Collection;
 
 /**

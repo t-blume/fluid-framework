@@ -15,6 +15,14 @@ The figure below outlines the basic concept of the FLuID approach. All modules, 
 
 ### Set up
 
+ - Add grammatica libray to local maven rpository
+ 	`` mvn install:install-file -Dfile=libs/grammatica-1.6.jar -DgroupId=percederberg.net -DartifactId=grammatica -Dversion=1.6 -Dpackaging=jar -DgeneratePom=true``
+ - Get submodule schema-graph and add jar to local maven repository
+ 	+ clone fluid-schema-graph
+ 	+ cd into project
+ 	+ ``mvn package``
+ 	+ ``mvn install:install-file -Dfile=target/schema-graph-1.0.jar -DgroupId=kd.informatik -DartifactId=schema-graph -Dversion=1.0 -Dpackaging=jar -DgeneratePom=true``
+
 The computation pipeline and the query engine are developed as Java 8 Maven projects. We rely on the Rdf4J triple stores interface since we reuse the RDF beans framework (https://github.com/cyberborean/rdfbeans).
 
 #### Computation Pipeline

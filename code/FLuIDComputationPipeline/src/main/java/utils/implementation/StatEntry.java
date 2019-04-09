@@ -1,8 +1,8 @@
 package utils.implementation;
 
 
-import common.interfaces.ILocatable;
-import common.interfaces.IResource;
+import common.ILocatable;
+import common.IResource;
 
 /**
  * Created by Blume Till on 08.08.2016.

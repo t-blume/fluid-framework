@@ -1,5 +1,7 @@
 package common.interfaces;
 
+import common.ILocatable;
+
 /**
  * Created by Blume Till on 27.04.2017.
  */

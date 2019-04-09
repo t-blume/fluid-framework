@@ -1,10 +1,10 @@
 package processing.preprocessing.implementation;
 
 
-import common.implemenation.Quad;
+import common.IInstanceElement;
+import common.IQuint;
 import common.implemenation.RDFInstance;
-import common.interfaces.IInstanceElement;
-import common.interfaces.IQuint;
+import common.implementation.Quad;
 import processing.preprocessing.interfaces.IQuintListener;
 import utils.interfaces.IElementCache;
 

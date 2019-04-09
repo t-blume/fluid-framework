@@ -1,7 +1,7 @@
 package input.interfaces;
 
 
-import common.interfaces.IQuint;
+import common.IQuint;
 import processing.preprocessing.interfaces.IQuintListener;
 import processing.preprocessing.interfaces.IQuintSourceListener;
 
@@ -14,9 +14,9 @@ import processing.preprocessing.interfaces.IQuintSourceListener;
  * When the source closed down and no more quints will be produced, the
  * listeners should be notified by calling
  * {@link IQuintSourceListener#sourceClosed()}
- * 
+ *
  * @author Bastian
- * 
+ *
  */
 public interface IQuintSource {
 
@@ -34,7 +34,7 @@ public interface IQuintSource {
 	/**
 	 * Registers an {@link IQuintListener} which will be notified for each
 	 * produced quint
-	 * 
+	 *
 	 * @param listener
 	 *            The listener to be registered
 	 */
@@ -43,7 +43,7 @@ public interface IQuintSource {
 	/**
 	 * Removes a registered {@link IQuintListener}, if it matches the given one.
 	 * Otherwise no changes will happen
-	 * 
+	 *
 	 * @param listener
 	 *            The listener to be removed
 	 */

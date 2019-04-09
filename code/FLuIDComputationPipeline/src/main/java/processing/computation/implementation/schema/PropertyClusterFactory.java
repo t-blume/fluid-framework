@@ -1,11 +1,11 @@
 package processing.computation.implementation.schema;
 
 
-import common.interfaces.IInstanceElement;
-import common.interfaces.IResource;
-import common.interfaces.ISchemaGraph;
+import common.IInstanceElement;
+import common.IResource;
 import output.interfaces.IElementStore;
 import utils.interfaces.IElementCache;
+import zbw.cau.gotham.schema.SchemaGraphInferencing;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -14,7 +14,7 @@ import java.util.Collection;
 public class PropertyClusterFactory extends SimpleSchemaElementFactory {
 
 
-    public PropertyClusterFactory(IElementCache<IInstanceElement> window, IElementStore schemaElementsStore, ISchemaGraph schemaGraph,
+    public PropertyClusterFactory(IElementCache<IInstanceElement> window, IElementStore schemaElementsStore, SchemaGraphInferencing schemaGraph,
                                   Collection<String> allowedLabels, Collection<String> disallowedLabels, boolean useSameAsInstances,
                                   boolean useIncomingProperties, boolean useOutgoingProperties) {
         super(window, schemaElementsStore, schemaGraph, allowedLabels, disallowedLabels, useSameAsInstances,

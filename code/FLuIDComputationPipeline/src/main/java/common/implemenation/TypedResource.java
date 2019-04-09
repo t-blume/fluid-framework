@@ -1,6 +1,6 @@
 package common.implemenation;
 
-import common.interfaces.IResource;
+import common.IResource;
 
 /**
  * A wrapper resource, which enriches a given resource with a type. For example

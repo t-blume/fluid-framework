@@ -1,6 +1,6 @@
 package processing.computation.implementation.payload;
 
-import common.interfaces.IInstanceElement;
+import common.IInstanceElement;
 import common.interfaces.ISchemaElement;
 
 public abstract class PayloadElementFactory {

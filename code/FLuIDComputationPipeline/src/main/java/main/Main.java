@@ -1,9 +1,8 @@
 package main;
 
-import common.interfaces.IInstanceElement;
-import common.interfaces.IQuint;
+import common.IInstanceElement;
+import common.IQuint;
 import common.interfaces.ISchemaElement;
-import common.interfaces.ISchemaGraph;
 import input.implementation.FileQuadSource;
 import input.interfaces.IQuintSource;
 import org.apache.commons.cli.*;
@@ -23,6 +22,7 @@ import utils.implementation.FLuIDVocabulary;
 import utils.implementation.MemoryTracker;
 import utils.implementation.Window;
 import utils.interfaces.IElementCache;
+import zbw.cau.gotham.schema.SchemaGraphInferencing;
 
 import java.io.*;
 import java.util.*;
@@ -51,8 +51,8 @@ public class Main {
         boolean isDirectory = false;
 
 
-        if (cmd.hasOption("svm")) {
-            String input_writing_method = cmd.getOptionValue("svm");
+        if (cmd.hasOption("swm")) {
+            String input_writing_method = cmd.getOptionValue("swm");
             RDF4JSchemaElementStore.WRITING_METHOD[] array = RDF4JSchemaElementStore.WRITING_METHOD.values();
             Arrays.sort(array);
             if (Arrays.binarySearch(array, input_writing_method) != -1)
@@ -62,8 +62,6 @@ public class Main {
                         + Arrays.toString(RDF4JSchemaElementStore.WRITING_METHOD.values()));
                 System.exit(-1);
             }
-
-
         }
 
         if (cmd.hasOption("t"))
@@ -397,7 +395,7 @@ public class Main {
 
 
     public static Map<String, SchemaComputation> loadSchemaPropertiesFiles(IElementCache<IInstanceElement> window,
-                                                                           int schemaCacheSize, ISchemaGraph schemaGraph,
+                                                                           int schemaCacheSize, SchemaGraphInferencing schemaGraph,
                                                                            WriterStyle writerStyle, String externalRepositoryURL,
                                                                            String outputFolder, boolean clearRepo, boolean zip) {
         Properties prop = new Properties();

@@ -1,8 +1,8 @@
 package output.interfaces;
 
 
-import common.interfaces.IQuint;
-import common.interfaces.IResource;
+import common.IQuint;
+import common.IResource;
 import org.apache.jena.query.Query;
 
 import java.util.List;

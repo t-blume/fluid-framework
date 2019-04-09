@@ -1,8 +1,8 @@
 package utils.implementation;
 
-import common.interfaces.IInstanceElement;
-import common.interfaces.IQuint;
-import common.interfaces.IResource;
+import common.IInstanceElement;
+import common.IQuint;
+import common.IResource;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import utils.interfaces.IElementCache;

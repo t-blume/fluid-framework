@@ -1,9 +1,9 @@
 package utils.interfaces;
 
 
-import common.interfaces.IInstanceElement;
-import common.interfaces.ILocatable;
-import common.interfaces.IResource;
+import common.IInstanceElement;
+import common.ILocatable;
+import common.IResource;
 
 import java.util.Set;
 

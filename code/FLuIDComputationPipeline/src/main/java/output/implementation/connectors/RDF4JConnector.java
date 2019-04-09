@@ -1,10 +1,10 @@
 package output.implementation.connectors;
 
 
-import common.implemenation.NodeResource;
-import common.implemenation.Quad;
-import common.interfaces.IQuint;
-import common.interfaces.IResource;
+import common.IQuint;
+import common.IResource;
+import common.implementation.NodeResource;
+import common.implementation.Quad;
 import common.interfaces.ISchemaElement;
 import org.apache.jena.query.Query;
 import org.apache.logging.log4j.LogManager;
@@ -24,8 +24,6 @@ import org.eclipse.rdf4j.repository.sail.SailRepository;
 import org.eclipse.rdf4j.rio.*;
 import org.eclipse.rdf4j.rio.helpers.NTriplesParserSettings;
 import org.eclipse.rdf4j.rio.ntriples.NTriplesParserFactory;
-import org.eclipse.rdf4j.rio.ntriples.NTriplesWriterFactory;
-import org.eclipse.rdf4j.rio.turtle.TurtleWriterFactory;
 import org.eclipse.rdf4j.sail.nativerdf.NativeStore;
 import org.semanticweb.yars.nx.Resource;
 import output.interfaces.IConnector;
@@ -36,7 +34,6 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.charset.Charset;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedList;

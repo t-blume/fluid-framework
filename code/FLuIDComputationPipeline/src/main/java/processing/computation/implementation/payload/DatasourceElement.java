@@ -1,8 +1,8 @@
 package processing.computation.implementation.payload;
 
-import common.implemenation.NodeResource;
+import common.IResource;
+import common.implementation.NodeResource;
 import common.interfaces.IPayloadElement;
-import common.interfaces.IResource;
 import org.cyberborean.rdfbeans.annotations.RDF;
 import org.cyberborean.rdfbeans.annotations.RDFBean;
 import org.cyberborean.rdfbeans.annotations.RDFSubject;

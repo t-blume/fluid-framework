@@ -1,7 +1,7 @@
 package output.interfaces;
 
 
-import common.interfaces.ILocatable;
+import common.ILocatable;
 
 /**
  * A listener for emitted schema elements

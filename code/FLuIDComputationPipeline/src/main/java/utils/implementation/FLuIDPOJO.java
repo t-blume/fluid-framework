@@ -1,11 +1,11 @@
 package utils.implementation;
 
 
-import common.implemenation.NodeResource;
-import common.implemenation.Quad;
+import common.IQuint;
+import common.IResource;
+import common.implementation.NodeResource;
+import common.implementation.Quad;
 import common.interfaces.IPayloadElement;
-import common.interfaces.IQuint;
-import common.interfaces.IResource;
 import common.interfaces.ISchemaElement;
 import org.apache.jena.graph.Node;
 import org.apache.jena.graph.NodeFactory;
