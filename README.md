@@ -15,8 +15,8 @@ The figure below outlines the basic concept of the FLuID approach. All modules, 
 
 ### Set up
 
- - Add grammatica libray to local maven rpository
- 	`` mvn install:install-file -Dfile=libs/grammatica-1.6.jar -DgroupId=percederberg.net -DartifactId=grammatica -Dversion=1.6 -Dpackaging=jar -DgeneratePom=true``
+ - Add grammatica libray to local maven repository
+ 	``mvn install:install-file -Dfile=libs/grammatica-1.6.jar -DgroupId=percederberg.net -DartifactId=grammatica -Dversion=1.6 -Dpackaging=jar -DgeneratePom=true``
  - Get submodule schema-graph and add jar to local maven repository
  	+ clone fluid-schema-graph
  	+ cd into project
