@@ -1,7 +1,7 @@
-# FLuID Framework
+# FLUID Framework
 
 ## Disclaimer
-The source code of the FLuID framework is still under active development. Some features are still missing but will be added soon. Also, the documentation is quite limited, but we are working on more examples.
+The source code of the FLUID framework is still under active development. Some features are still missing but will be added soon. Also, the documentation is quite limited, but we are working on more examples.
 
 ## About
 The Formal schema-Level Index model for the web of Data (FLuID) is a mathematical model based on equivalence relations to formulate schema-level indices [1]. In this project, we implemented the basic building blocks, i.e., the Schema Elements along with their parameterizations in a generic, modular processing pipeline. This enables users to easily configure and compute any schema-level index.
