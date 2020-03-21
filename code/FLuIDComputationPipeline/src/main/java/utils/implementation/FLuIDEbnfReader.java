@@ -34,7 +34,7 @@ public class FLuIDEbnfReader {
             logger.debug(configString);
             FluidParser fluidParser = new FluidParser(new StringReader(configString));
 
-                Node rootNode = fluidParser.parse();
+            Node rootNode = fluidParser.parse();
 
 
             Config config = parseParamterizations(rootNode);
@@ -232,7 +232,6 @@ public class FLuIDEbnfReader {
         }
 
 
-
         if (element.getId() == FluidConstants.IDENTITY) {
             if (config.useTypeSets)
                 return new IdentityEquivalenceFactory(window, schemaCache, schemaGraph, rdfType, new HashSet<>(),
@@ -252,38 +251,38 @@ public class FLuIDEbnfReader {
                         config.useOutgoingProperties, new TypeExtractor());
             else if (config.useRelationSets)
                 return new ObjectClusterFactory(window, schemaCache, schemaGraph,
-                        new HashSet<>(), rdfType, config.useSameAsInstances,  config.useIncomingProperties,
+                        new HashSet<>(), rdfType, config.useSameAsInstances, config.useIncomingProperties,
                         config.useOutgoingProperties, new TypeExtractor());
             else
                 return new ObjectClusterFactory(window, schemaCache, schemaGraph,
-                        new HashSet<>(), new HashSet<>(), config.useSameAsInstances,  config.useIncomingProperties,
+                        new HashSet<>(), new HashSet<>(), config.useSameAsInstances, config.useIncomingProperties,
                         config.useOutgoingProperties, new TypeExtractor());
 
         } else if (element.getId() == FluidConstants.PROPERTY_CLUSTER) {
             if (config.useTypeSets)
                 return new PropertyClusterFactory(window, schemaCache, schemaGraph,
-                        rdfType, new HashSet<>(), config.useSameAsInstances,  config.useIncomingProperties,
+                        rdfType, new HashSet<>(), config.useSameAsInstances, config.useIncomingProperties,
                         config.useOutgoingProperties);
             else if (config.useRelationSets)
                 return new PropertyClusterFactory(window, schemaCache, schemaGraph,
-                        new HashSet<>(), rdfType, config.useSameAsInstances,  config.useIncomingProperties,
+                        new HashSet<>(), rdfType, config.useSameAsInstances, config.useIncomingProperties,
                         config.useOutgoingProperties);
             else
                 return new PropertyClusterFactory(window, schemaCache, schemaGraph,
-                        new HashSet<>(), new HashSet<>(), config.useSameAsInstances,  config.useIncomingProperties,
+                        new HashSet<>(), new HashSet<>(), config.useSameAsInstances, config.useIncomingProperties,
                         config.useOutgoingProperties);
         } else if (element.getId() == FluidConstants.PROPERTYOBJECT_CLUSTER) {
             if (config.useTypeSets)
                 return new PropertyObjectClusterFactory(window, schemaCache, schemaGraph,
-                        rdfType, new HashSet<>(), config.useSameAsInstances,  config.useIncomingProperties,
+                        rdfType, new HashSet<>(), config.useSameAsInstances, config.useIncomingProperties,
                         config.useOutgoingProperties, null);
             else if (config.useRelationSets)
                 return new PropertyObjectClusterFactory(window, schemaCache, schemaGraph,
-                        new HashSet<>(), rdfType, config.useSameAsInstances,  config.useIncomingProperties,
+                        new HashSet<>(), rdfType, config.useSameAsInstances, config.useIncomingProperties,
                         config.useOutgoingProperties, null);
             else
                 return new PropertyObjectClusterFactory(window, schemaCache, schemaGraph,
-                        new HashSet<>(), new HashSet<>(), config.useSameAsInstances,  config.useIncomingProperties,
+                        new HashSet<>(), new HashSet<>(), config.useSameAsInstances, config.useIncomingProperties,
                         config.useOutgoingProperties, null);
         } else
             logger.error("Unsupported Simple Schema Element: " + element);
