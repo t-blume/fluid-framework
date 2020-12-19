@@ -73,12 +73,14 @@ public class Main {
             String input_filename = cmd.getOptionValue("f");
             files.add(input_filename);
             isDirectory = false;
+            logger.info( "input_filename " + input_filename );
         }
         // option d - read and process a directory
         if (cmd.hasOption("d")) {
             String input_directory = cmd.getOptionValue("d");
             files.add(input_directory);
             isDirectory = true;
+            logger.info( "input_directory " + input_directory );
         }
         boolean zip = cmd.hasOption("z");
 
@@ -381,6 +383,7 @@ public class Main {
         CommandLine cmd;
         // this parses the command line for all other options
         try {
+            logger.info( args );
             // parse the command line arguments with the defined options
             cmd = parser.parse(options, args, true);
 

@@ -126,6 +126,12 @@ public class SchemEXVocabulary implements VocabularyConstants {
     ///////////////////////////////////////////////////
 
     //CSE -------------------------------------------------------------
+
+    @Override
+    public String RETRIEVE_ALL_COMPLEX_SCHEMA_ELEMENTS() {
+        return "?x" + " <" + CONST_RDF_TYPE() + "> <" + CONST_COMPLEX_SCHEMA_ELEMENT() +">";
+    }
+
     @Override
     public String ADD_CSE_QUERY_CONSTRAINT_PC(String cseNode, Set<String> s) {
         return null;
@@ -172,6 +178,9 @@ public class SchemEXVocabulary implements VocabularyConstants {
     }
 
     @Override
+    public String CREATE_POC_VIA_HASH(String s) { return null; }
+
+    @Override
     public String GET_DS_VIA_PC(String pc) {
         return "?x <http://blubidy.com> ?y";
     }
@@ -180,6 +189,9 @@ public class SchemEXVocabulary implements VocabularyConstants {
     public String EXTRACT_HASH_VALUE_FROM_PC(String pc) {
         return null;
     }
+
+    @Override
+    public String CREATE_PC_VIA_HASH(String s) {return null; }
 
     @Override
     public String GET_DS_FROM_EMPTY_PROPERTIES_CLUSTER() {
@@ -236,6 +248,12 @@ public class SchemEXVocabulary implements VocabularyConstants {
 
 
     //PC --------------------------------------------------------------
+
+    @Override
+    public String RETRIEVE_ALL_GET_PROPERTY_CLUSTER() {
+        return "?x" + " <" + CONST_RDF_TYPE() + ">  <" + CONST_PROPERTY_CLUSTER() +">";
+    }
+
     @Override
     public String GET_CONSTRAINTS_PROPERTIES_FROM_PC(String pc) {
         String query = "<" + pc + "> ?p " + " []"; //CONST_UNRESOLVED_LITERAL_CLUSTER(); //TODO make list for stuff for Till
@@ -319,6 +337,12 @@ public class SchemEXVocabulary implements VocabularyConstants {
     }
 
     //OC --------------------------------------------------------------
+
+    @Override
+    public String RETRIEVE_ALL_OBJECT_CLUSTER() {
+        return "?x" + " <" + CONST_RDF_TYPE() + "> <" + CONST_OBJECT_CLUSTER() +">";
+    }
+
     @Override
     public String EXTRACT_HASH_VALUE_FROM_OC(String oc) {
         String result = oc.replace("<", "").replace(">", "");
